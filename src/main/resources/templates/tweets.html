@@ -5,6 +5,8 @@
  <title>Hello Twitter</title>
 </head>
   <body>
-    <span th:text="${message}">Hello html</span>
+    <ul>  
+      <li th:each="tweet : ${tweets}" th:text="${tweet}">Some tweet</li>
+    </ul> 
   </body>
 </html>
