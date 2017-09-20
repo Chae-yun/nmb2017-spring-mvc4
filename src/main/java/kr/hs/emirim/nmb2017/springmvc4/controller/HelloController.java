@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloController {
 
 	@RequestMapping("/")
-	public String hello(@RequestParam("name") String userName, Model model) {
+	public String hello(@RequestParam(defaultValue = "홍길동") String userName, Model model) {
 		model.addAttribute("message", userName + "님 안녕하세요~!"); 
 		return "resultPage";
 	}
